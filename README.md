@@ -42,7 +42,7 @@ Fields in data
 - **Experiment Set 4:** Tuned the first xgb model to get the final model. Additional features added to the xgb models were week_of_year, week_num (from starting of data), max total price for sku and total price/ max total price for sku. The **final model** gives score **386.025005238819 (public), 424.879932387956 (private)** with **rank 6** overall in the competition.
 
 
-## Best Performing Model Approach
+## Approach for Best Performing Model
 The best performing model for me was xgboost. The training process is as follows:
 - **Train-Eval Split:** Last 12 weeks of data for each store and sku was used as eval set and rest was training set.
 - **Training:** Trained xgboost with early stopping on eval set.
