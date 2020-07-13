@@ -1,5 +1,6 @@
 # Analytics Vidhya JanataHack Demand Forecasting
 
+I secured 6th rank in the competition and the final model was an xgboost model trained on data with only a few additional features.
 
 ## Description Of Problem
 Given 3 years of SKU sales data from 76 stores, the problem is to predict sales for next 12 weeks.
