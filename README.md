@@ -44,7 +44,7 @@ Fields in data
 ## Best Performing Model Approach
 The best performing model for me was xgboost. The training process is as follows:
 - **Train-Eval Split:** Last 12 weeks of data for each store and sku was used as eval set and rest was training set.
-- **Model:** Trained xgboost with early stopping on eval set.
+- **Training:** Trained xgboost with early stopping on eval set.
 - **Final Model:** Trained final model on full data with best iterations learned in previous step.
 
 
