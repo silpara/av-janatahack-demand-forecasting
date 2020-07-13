@@ -4,6 +4,9 @@
 ## Description Of Problem
 Given 3 years of SKU sales data from 76 stores, the problem is to predict sales for next 12 weeks.
 
+## Evaluation
+The evaluation metric was 100\*RMSLE (Root Mean Squared Log Error). This eval metric is available xgboost out-of-the-box.
+
 
 ## Data
 Data can be downloaded from the contest page [JanataHack: Demand Forecasting - Problem Statement](https://datahack.analyticsvidhya.com/contest/janatahack-demand-forecasting/#ProblemStatement)
@@ -34,4 +37,4 @@ Didn't spend more time to tune prophet model/add more signals but there definite
 - Experiment Set 1: xgb model performed will right from the start. I added store and sku as features to the model since test set had the same stores and sku. The baseline model score was 564.961275573224 (public),569.959964232437 (private)
 - Experiment Set 2: I created model for each store independently but it didn't do well -- probably there was a bug?
 - Experiment Set 3: Added lagged units_sold as features - that didn't do well either -- probably a bug in code which I didn't get into.
-- Experiment Set 4: Tuned the first xgb model to get the final model. Additional features added to the xgb models were week_of_year, week_num (from starting of data), max total price for sku and total price/ max total price for sku.
+- Experiment Set 4: Tuned the first xgb model to get the final model. Additional features added to the xgb models were week_of_year, week_num (from starting of data), max total price for sku and total price/ max total price for sku. The *final model* gives score *386.025005238819 (public), 424.879932387956 (private)* with *rank 6* overall in the competition.
