@@ -49,3 +49,4 @@ The best performing model for me was xgboost. The training process is as follows
 - **Final Model:** Trained final model on full data with best iterations learned in previous step.
 
 
+PS: I write about Data Science, Machine Learning and AI at [dilbertai.com](https://www.dilbertai.com), where I share ideas and concepts I have learned over the course of my work, summarize research papers I read and practical knowledge I have gained from use cases I have worked on.
