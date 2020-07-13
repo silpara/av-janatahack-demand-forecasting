@@ -25,7 +25,7 @@ Fields in data
 - units_sold (target)
 
 ## Models
-1. [Forecasting using fbprophet](https://github.com/silpara/av-janatahack-demand-forecasting/blob/master/fbprophet-av-janatahack-demand-forecasting.ipynb) 
+### 1. [Forecasting using fbprophet](https://github.com/silpara/av-janatahack-demand-forecasting/blob/master/fbprophet-av-janatahack-demand-forecasting.ipynb) 
 - **Experiment Set 1:** I used fbprophet library to fit time series model for each (store, sku) pair. This gave scores in range 785-809 (public), 710-739 (private).
 - **Experiment Set 2:** Log transformed dependent variable and fitted prophet model. Score: 638.649013296102(public), 577.817887311402 (private)
 - **Experiment Set 3:** Added regressors - total_price, base_price, is_featured_sku, is_display_sku to the model. Score jumped to 497.965157591909 (public), 563.605151425418 (private)
@@ -33,7 +33,8 @@ Fields in data
 
 	Didn't spend more time to tune prophet model/add more signals but there definitely looked scope to further improve it.
 
-2. [Forecasting using xgboost](https://github.com/silpara/av-janatahack-demand-forecasting/blob/master/xgb-av-janatahack-demand-forecasting.ipynb)
+### 2. [Forecasting using xgboost](https://github.com/silpara/av-janatahack-demand-forecasting/blob/master/xgb-av-janatahack-demand-forecasting.ipynb)
+
  Additional features added to the xgb models were week_of_year, week_num (from starting of data), max total price for sku and total price/ max total price for sku. Target variable was log transformed sales.
 - **Experiment Set 1:** xgb model performed will right from the start. I added store and sku as features to the model since test set had the same stores and sku. The baseline model score was 564.961275573224 (public),569.959964232437 (private)
 - **Experiment Set 2:** I created model for each store independently but it didn't do well -- probably there was a bug?
