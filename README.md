@@ -6,7 +6,7 @@ I secured 6th rank in the competition and the final model was an xgboost model t
 Given 3 years of SKU sales data from 76 stores, the problem is to predict sales for next 12 weeks.
 
 ## Evaluation
-The evaluation metric was 100\*RMSLE (Root Mean Squared Log Error). This eval metric is available xgboost out-of-the-box.
+The evaluation metric was 100\*RMSLE (Root Mean Squared Log Error). This eval metric is available in xgboost out-of-the-box.
 
 
 ## Data
@@ -29,9 +29,9 @@ Fields in data
 - **Experiment Set 1:** I used fbprophet library to fit time series model for each (store, sku) pair. This gave scores in range 785-809 (public), 710-739 (private).
 - **Experiment Set 2:** Log transformed dependent variable and fitted prophet model. Score: 638.649013296102(public), 577.817887311402 (private)
 - **Experiment Set 3:** Added regressors - total_price, base_price, is_featured_sku, is_display_sku to the model. Score jumped to 497.965157591909 (public), 563.605151425418 (private)
-- **Experiment Set 4:** I added discounting, featured and display as special events to model. I added total price / max total price for sku as signal for discounted price for sku. This model takes ~ 30 mins to train and performed surprisingly well - 499.384415259399 (public) , 566.333485529977 (private).
+- **Experiment Set 4:** I added discounting, featured and display as special events to model. I added total price / max total price for sku as signal for discounted price for sku. This model gave the scores 499.384415259399 (public) , 566.333485529977 (private).
 
-	Didn't spend more time to tune prophet model/add more signals but there definitely looked scope to further improve it.
+	This model takes ~ 30 mins to train. I didn't spend more time to tune prophet model or add more signals but there definitely looked scope to further improve it.
 
 ### 2. [Forecasting using xgboost](https://github.com/silpara/av-janatahack-demand-forecasting/blob/master/xgb-av-janatahack-demand-forecasting.ipynb)
 
